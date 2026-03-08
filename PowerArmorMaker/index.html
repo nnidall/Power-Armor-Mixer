@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Power Armor Builder</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="theme-fo4">
+
+<audio id="radio" autoplay loop>
+<source src="music/fallout4.mp3" type="audio/mpeg">
+</audio>
+
+<div class="layout">
+
+<!-- LEFT PANEL -->
+
+<div class="left-panel">
+
+<h2>Armor Parts</h2>
+
+<label>Helmet</label>
+<select onchange="setPart('helmet',this.value)">
+<option value="">None</option>
+<option value="t45">T45</option>
+<option value="t51">T51</option>
+<option value="t60">T60</option>
+<option value="x01">X01</option>
+<option value="x02">X02</option>
+<option value="hellfire">Hellfire</option>
+<option value="raider">Raider</option>
+</select>
+
+<label>Torso</label>
+<select onchange="setPart('torso',this.value)">
+<option value="">None</option>
+<option value="t45">T45</option>
+<option value="t51">T51</option>
+<option value="t60">T60</option>
+<option value="x01">X01</option>
+<option value="x02">X02</option>
+<option value="hellfire">Hellfire</option>
+<option value="raider">Raider</option>
+</select>
+
+<label>Left Arm</label>
+<select onchange="setPart('left_arm',this.value)">
+<option value="">None</option>
+<option value="t45">T45</option>
+<option value="t51">T51</option>
+<option value="t60">T60</option>
+<option value="x01">X01</option>
+<option value="x02">X02</option>
+<option value="hellfire">Hellfire</option>
+<option value="raider">Raider</option>
+</select>
+
+<label>Right Arm</label>
+<select onchange="setPart('right_arm',this.value)">
+<option value="">None</option>
+<option value="t45">T45</option>
+<option value="t51">T51</option>
+<option value="t60">T60</option>
+<option value="x01">X01</option>
+<option value="x02">X02</option>
+<option value="hellfire">Hellfire</option>
+<option value="raider">Raider</option>
+</select>
+
+<label>Left Leg</label>
+<select onchange="setPart('left_leg',this.value)">
+<option value="">None</option>
+<option value="t45">T45</option>
+<option value="t51">T51</option>
+<option value="t60">T60</option>
+<option value="x01">X01</option>
+<option value="x02">X02</option>
+<option value="hellfire">Hellfire</option>
+<option value="raider">Raider</option>
+</select>
+
+<label>Right Leg</label>
+<select onchange="setPart('right_leg',this.value)">
+<option value="">None</option>
+<option value="t45">T45</option>
+<option value="t51">T51</option>
+<option value="t60">T60</option>
+<option value="x01">X01</option>
+<option value="x02">X02</option>
+<option value="hellfire">Hellfire</option>
+<option value="raider">Raider</option>
+</select>
+
+<button onclick="resetArmor()">Reset Armor</button>
+
+<h2>Theme</h2>
+
+<button onclick="setTheme('fo4')">Fallout 4</button>
+<button onclick="setTheme('fo3')">Fallout 3</button>
+<button onclick="setTheme('fnv')">New Vegas</button>
+
+</div>
+
+<!-- CENTER VIEW -->
+
+<div class="viewer">
+
+<div class="armor-container">
+
+<img id="frame" src="assets/frame.png">
+
+<img id="left_leg" class="layer">
+<img id="right_leg" class="layer">
+
+<img id="torso" class="layer">
+
+<img id="left_arm" class="layer">
+<img id="right_arm" class="layer">
+
+<img id="helmet" class="layer">
+
+</div>
+
+</div>
+
+<!-- RIGHT PRESETS -->
+
+<div class="preset-panel">
+
+<h2>Power Armor Sets</h2>
+
+<div class="preset" onclick="generateSet('t45')">
+<img src="assets/presets/t45.png">
+<span>T45</span>
+</div>
+
+<div class="preset" onclick="generateSet('t51')">
+<img src="assets/presets/t51.png">
+<span>T51</span>
+</div>
+
+<div class="preset" onclick="generateSet('t60')">
+<img src="assets/presets/t60.png">
+<span>T60</span>
+</div>
+
+<div class="preset" onclick="generateSet('x01')">
+<img src="assets/presets/x01.png">
+<span>X01</span>
+</div>
+
+<div class="preset" onclick="generateSet('x02')">
+<img src="assets/presets/x02.png">
+<span>X02</span>
+</div>
+
+<div class="preset" onclick="generateSet('hellfire')">
+<img src="assets/presets/hellfire.png">
+<span>Hellfire</span>
+</div>
+
+<div class="preset" onclick="generateSet('raider')">
+<img src="assets/presets/raider.png">
+<span>Raider</span>
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
